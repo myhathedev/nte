@@ -2,8 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from 'components/styles/Home.module.css'
-
+import Navigation from 'components/components/nav'
+import Slides from 'components/components/slides'
 const inter = Inter({ subsets: ['latin'] })
+import { BsFillGearFill } from "react-icons/bs";
+import { Button } from 'react-bootstrap'
+
 
 export default function Home() {
   return (
@@ -14,110 +18,160 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
-        </div>
+   <main>
+      <div className="container-fluid p-0">
+        <Navigation/>
+        <Slides />
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
+        <div id="intro" className="container flex gap-8 py-28 items-center justify-evenly">
+          <div className="w-1/3 text-justify">
+            <p >With a combined experience of more than sixty years in the electrical business, we are able to service most electrical equipment, including specialized units manufactured in Europe and Asia. 
+               </p><p> We pride ourselves on the quality of our workmanship and are committed to providing the highest level of service in our field of expertise. We do this in the most cost effective manner according to our customer's individual circumstances in order to ensure complete customer satisfaction. 
+            </p>
+          </div>
+          <div className=" flex w-72 h-40r">
+            <img
+              className="w-full h-full object-cover"
+              src= '/vertical1.jpg'
+              alt="Second slide"
+            />
+          </div>
+          <div className=" flex w-72 h-40r">
+            <img
+              className="w-full h-full object-cover"
+              src= '/vertical2.jpg'
+              alt="Second slide"
+            />
+          </div>
+          <div className=" flex w-72 h-40r">
+            <img
+              className="w-full h-full object-cover"
+              src= '/vertical3.jpg'
+              alt="Second slide"
             />
           </div>
         </div>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
+        <div id="delivery" className= "flex">
+          
+          <div className="flex w-1/2">
+          <img
+            className="object-cover w-full h-full"
+            src= '/horizontal1.jpg'
+            alt="Second slide"
+          />
+          </div>
+         
+          <div className="flex items-center px-8 py-12 bg-slate-800 text-white w-1/2">
+            <div className="flex flex-col w-4/5 whitespace-normal break-word gap-4">
+              <p>Serving clients across Atlantic Canada for over many years </p>
+              <p className="text-5xl">Ask us about our pickup & delivery service available 24/7!</p>
+              <p>NTE provides a regularly scheduled pickup & delivery service anywhere in Nova Scotia, New Brunswick & PEI! Contact us for complete details.</p>
+             
+              <button className="py-3 px-4 text-xl text-white bg-slate-600 rounded-lg" >CONTACT US</button>
+         
+            </div>
+            
+          </div>
         </div>
-      </main>
+        
+        <div id ="our-service" className="container py-28 flex flex-col gap-16">
+          <div className="flex flex-col justify-center items-center">
+            <p>Take a look at</p>
+            <p className="text-6xl mb-0">Our Services</p>
+          </div>
+          
+          <div className="grid grid-cols-3 grid-rows-2 gap-4">
+            <div className="flex gap-4 items-center">
+              <div className="block bg-slate-700 w-12 h-12 p-3 rounded-full text-white"><BsFillGearFill /></div>
+              <p className="text-xl mb-0">Complete motor and generator diagnostics / repair</p>
+            </div>
+            <div className="flex gap-4 items-center">
+              <div className="block bg-slate-700 w-12 h-12 p-3 rounded-full text-white"><BsFillGearFill /></div>
+              <p className="text-xl mb-0">Complete motor and generator diagnostics / repair</p>
+            </div>
+            <div className="flex gap-4 items-center">
+              <div className="block bg-slate-700 w-12 h-12 p-3 rounded-full text-white"><BsFillGearFill /></div>
+              <p className="text-xl mb-0">Complete motor and generator diagnostics / repair</p>
+            </div>
+            <div className="flex gap-4 items-center">
+              <div className="block bg-slate-700 w-12 h-12 p-3 rounded-full text-white"><BsFillGearFill /></div>
+              <p className="text-xl mb-0">Complete motor and generator diagnostics / repair</p>
+            </div>
+            <div className="flex gap-4 items-center">
+              <div className="block bg-slate-700 w-12 h-12 p-3 rounded-full text-white"><BsFillGearFill /></div>
+              <p className="text-xl mb-0">Complete motor and generator diagnostics / repair</p>
+            </div>
+            <div className="flex gap-4 items-center">
+              <div className="block bg-slate-700 w-12 h-12 p-3 rounded-full text-white"><BsFillGearFill /></div>
+              <p className="text-xl mb-0">Complete motor and generator diagnostics / repair</p>
+            </div>
+          </div>
+          <div className="flex justify-center">
+              <button className="py-3 px-4 text-xl text-white bg-slate-600 rounded-lg" >VIEW MORE SERVICES</button>
+          </div>
+
+        </div>
+
+        <div className="container-fluid bg-slate-900">
+          <div className="container flex justify-between items-center py-16">
+            <p className="text-white text-4xl mb-0 font-bold">24-HOUR EMERGENCY SERVICE</p>
+            <div className="flex justify-center">
+              <button className="py-3 px-4 text-xl text-white bg-transparent border-2 border-white rounded-lg" >VIEW MORE SERVICES</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="container-fluid flex flex-col py-16 gap-12 bg-black text-white">
+        
+          <div className="container flex justify-evenly gap-8 ">
+            <div className="flex flex-col w-1/3 ">
+              <p className="text-2xl">ABOUT US</p>
+              <p className="text-gray-400">We have been serving Atlantic Canada's Electrical and Industrial needs since many years. We have been constantly expanding our operations, obtaining and retaining a highly skilled work force while implementing the latest technologies in equipment.</p>
+            </div>
+            <div className="flex w-1/5 flex-col">
+              <p className="text-2xl">QUICK LINK</p>
+              <div className="text-gray-400">
+                <p>About</p>
+                <p>Sales</p>
+                <p>Services</p>
+                <p>Contact</p>
+              </div>
+            </div>
+            <div className="flex flex-col w-1/4">
+              <p className="text-2xl">CONTACT US</p>
+              <div className="text-gray-400">
+                <p>Phone: (902) 461-7533</p>
+                <p>Email: Hieunnte@eastlink.ca</p>
+                <p>Address: 339 Windmill Road, Dartmouth, NS, B3A 1H8, Canada</p>
+              </div>
+            </div>
+           
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <div className="flex w-1/4">
+              <img
+                          className="object-contain w-full"
+                          src= '/Logo-white.png'
+                          alt="logo"
+                      />
+            </div>
+             
+                  
+          </div>
+          <div className=" flex h-4 border-t-2 py-8 justify-center border-gray-700 items-center">  
+            <p className="text-sm text-gray-500 ">&copy; 2023 Nguyen Technologies & Electrical Equipment. All rights reserved.  </p>
+            </div>
+        </div>
+
+    </div>
+
+   </main>
+
+     
+
+    
     </>
   )
 }
