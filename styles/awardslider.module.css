@@ -1,0 +1,116 @@
+  .container {
+    width: 80%;
+    height: 90vh;
+    margin:auto;
+    position: relative;
+    background-color: rgb(219, 235, 255);
+    box-shadow: 0 0 20px rgb(2, 58, 106);
+    border-radius: 5px;
+  }
+
+  .carousel {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: flex-start; 
+    overflow: hidden;
+    margin:auto; 
+    
+  }
+
+  .slider {
+    display: flex;
+    height: 100%;
+    width: 700%;
+    flex-shrink: 0;
+    transition: all 0.5s;
+    overflow: hidden;
+    
+  }
+
+  .slider section {
+    display: flex;
+    flex-basis: 20%;
+    flex-shrink:0;
+    flex:1;
+    width:20%; 
+  }
+  
+  .leftArrowStyles , .rightArrowStyles {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;  
+    padding: 5px;
+    font-size: 2rem;
+    color: rgb(190, 190, 190);
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .leftArrowStyles {
+    left: 0;
+  }
+  
+  .rightArrowStyles {
+    right: 0;
+  }
+
+ 
+  .leftArrowStyles:hover , .rightArrowStyles:hover {
+    color: rgb(112, 135, 248);
+    z-index: 10;
+  }
+  
+  .dotStyles {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+    gap: 1rem;
+    position: absolute;
+    z-index: 10;
+    bottom:1rem;
+    color: rgb(190, 190, 190);
+    font-size: 0.6rem;
+  }
+  
+.normaldot {
+  z-index:10;
+}
+
+.activedot {
+  color: rgb(68, 71, 230);
+  z-index:10;
+}
+.slideImage {
+  padding-bottom: 2rem;
+  width: 100%;
+  padding: 30px 10px 6rem 10px;
+}
+
+.section {
+  display: block;
+  position: relative;
+}
+.title {
+  width: 100%;
+  margin:auto;
+  text-align: center;
+  position: absolute;
+  height:fit-content;
+  bottom:0;
+  z-index: 20;
+}
+@keyframes appear {
+  from {transform: translate(100%);}
+  to {transform: translate(0%);}
+}
+
+@keyframes scale {
+  to {scale:1.5;}
+}
+    
+    
+

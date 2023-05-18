@@ -12,3 +12,28 @@
 
 }
 
+/* Slideshow */
+
+.containerSlide {
+  width: 650px;
+  margin: auto;
+  padding-top: 200px;
+}
+
+.containerSlide img {
+  height: 500px;
+
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.isAnimated {
+  animation: slide-in 0.5s ;
+}

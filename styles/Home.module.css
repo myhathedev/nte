@@ -1,4 +1,23 @@
 
+.contactbutton {
+  box-sizing: border-box;
+  display:flex;
+  color:white;
+  justify-content: center;
+  align-items: center;
+  border: solid white 2px;
+  border-radius: 0.5rem;
+  width: 20rem ;
+  height: 3rem;  
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.contactbutton:hover {
+  transition: all 0.2s;
+  box-shadow: 0 0 10px white;
+  text-shadow: 0 0 10px white;;
+}
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {

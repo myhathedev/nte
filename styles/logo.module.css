@@ -1,0 +1,21 @@
+.logoContainer {
+    display: block;
+    width: 3000px;
+ 
+    overflow-x: hidden;
+}
+  
+   .logo {
+    display: inline-block;
+    width: 1000px;
+    animation: move 20s linear infinite;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
