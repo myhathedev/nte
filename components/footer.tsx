@@ -14,7 +14,7 @@ export default function Footer() {
       <p className="text-2xl">QUICK LINKS</p>
       <div className="text-gray-400">
         {metadata.quicklinks.map((item,index)=> (
-          <Link className='no-underline' href={item.href} ><div className="text-gray-400 hover:text-sky-300 transition-colors duration-100" key={index}>{item.label}</div></Link>
+          <Link className='no-underline' href={item.href}  key={index} ><div className="text-gray-400 hover:text-sky-300 transition-colors duration-100">{item.label}</div></Link>
         ))}
       </div>
     </div>

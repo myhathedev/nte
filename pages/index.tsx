@@ -1,23 +1,22 @@
 import Head from 'next/head'
-import { BsFillGearFill ,BsTools , BsBoxSeam, BsFillCheckCircleFill ,BsFillPersonCheckFill} from "react-icons/bs";
+import { BsFillGearFill ,BsTools , BsBoxSeam,BsFillPersonCheckFill} from "react-icons/bs";
 import Layout from 'components/components/layout'
 import LogoAnimation from 'components/components/logoAnimation';
 import styles from '../styles/Home.module.css'
+import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import metadata from 'components/components/data/metadata';
 import SlideSlider from 'components/components/slide-slider';
 import Awards from 'components/components/award-slideshow';
 import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React, { HtmlHTMLAttributes, useLayoutEffect, useRef } from 'react';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-
 
 export default function Home() {
   const intro = useRef<HTMLDivElement>(null);
   const ourServices = useRef<HTMLDivElement>(null);
-
+ 
   useLayoutEffect(() => {
     const ctx = gsap.context((self:any) => {
       const boxes = self.selector('.box');
@@ -33,10 +32,6 @@ export default function Home() {
         });
       });
     }, intro); // <- Scope!
-    return () => ctx.revert(); // <- Cleanup!
-  }, []);
-
-  useLayoutEffect(() => {
     const ctx2 = gsap.context((self:any) => {
       const boxes = self.selector('.sv-item');
       const title = self.selector('.sv-title');
@@ -60,10 +55,13 @@ export default function Home() {
           },
         });
       });
-    }, ourServices); // <- Scope!
-    return () => ctx2.revert(); // <- Cleanup!
+    }, ourServices);
+    return () => {
+      ctx.revert(); 
+      ctx2.revert();
+    } // <- Cleanup!
   }, []);
-  
+
   return (
     <>
       <Head>
