@@ -1,6 +1,6 @@
 import { navItems } from "./data/navItems"
 import Link from 'next/link'
-import { BsFillEnvelopePaperFill, BsGeoAltFill ,BsFillPhoneFill} from "react-icons/bs";
+import { BsFillEnvelopePaperFill, BsGeoAltFill} from "react-icons/bs";
 import metadata from "./data/metadata";
 
 export default function Navigation() {

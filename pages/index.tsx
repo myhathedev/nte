@@ -3,7 +3,7 @@ import { BsFillGearFill ,BsTools , BsBoxSeam,BsFillPersonCheckFill} from "react-
 import Layout from 'components/components/layout'
 import LogoAnimation from 'components/components/logoAnimation';
 import styles from '../styles/Home.module.css'
-import React, { useEffect, useLayoutEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import metadata from 'components/components/data/metadata';
 import SlideSlider from 'components/components/slide-slider';
 import Awards from 'components/components/award-slideshow';

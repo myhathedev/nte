@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { BsFillGearFill } from "react-icons/bs";
 import Layout from 'components/components/layout'
 import Frame from 'components/components/frame';
 import metadata from 'components/components/data/metadata';
