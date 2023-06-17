@@ -1,16 +1,18 @@
 
-import { CSSProperties, useState , useRef, useEffect, HtmlHTMLAttributes } from "react";
+import { useState , useRef, useEffect } from "react";
 import Image from 'next/image'
 
 import { BsFillCircleFill , BsChevronDoubleRight , BsChevronDoubleLeft} from "react-icons/bs";
 import styles from '../styles/slider.module.css'
 import metadata from "./data/metadata";
+import Link from "next/link";
 
 type Slides = {
     id: number,
     url:string;  
     title:string;
     button:string;
+    link:string;
 }
 
 const SlideSlider= () => {
@@ -139,7 +141,10 @@ const transitionEnd =() => {
                                     className={index1===index? styles.slideImageActive :styles.slideImage}
                                     
                                 />
-                            {/* <img className = {styles.slideImage} src ={item.url} alt={item.title} /> */}
+                            <div className='flex flex-col z-20 justify-center items-center w-full h-full px-40 gap-8'>
+                                <div className='text-white text-5xl text-center'>{item.title}</div>
+                                <Link href={item.link}><div className={styles.buttons}>{item.button}</div></Link>
+                            </div>
                         </section>
                     )                  
                     )}

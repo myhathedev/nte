@@ -1,15 +1,15 @@
 .logoContainer {
     display: block;
-    width: 3000px;
- 
+    width:6000px;
     overflow-x: hidden;
 }
   
    .logo {
     display: inline-block;
-    width: 1000px;
-    animation: move 20s linear infinite;
+    width: 2000px;
+    animation: move 30s linear infinite;
   }
+
   
   @keyframes move {
     0% {

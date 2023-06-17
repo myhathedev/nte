@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { BsFillGearFill } from "react-icons/bs";
-import Layout from 'components/components/layout'
+import Layout from 'components/components/layout';
+import Frame from 'components/components/frame';
 
 
 export default function AboutUs() {
@@ -14,10 +15,8 @@ export default function AboutUs() {
       </Head>
    <main>
     <Layout>
+      <Frame title = 'About Us'></Frame>
       <div className='container p-24'>
-      {/* <div> - Who we are, why choose us…</div> */}
-      <h1>About Us</h1>
-      <div>Coming soon...</div>
       </div>
      
 

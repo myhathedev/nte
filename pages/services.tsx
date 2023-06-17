@@ -1,6 +1,8 @@
 import Head from 'next/head'
-import { BsFillGearFill } from "react-icons/bs";
-import Layout from 'components/components/layout'
+import { BsFillCursorFill } from "react-icons/bs";
+import Layout from 'components/components/layout';
+import metadata from 'components/components/data/metadata';
+import Frame from 'components/components/frame';
 
 
 export default function Services() {
@@ -14,70 +16,24 @@ export default function Services() {
       </Head>
    <main>
     <Layout>
-      <div className='container p-24'>
-        <h1>Our Services</h1>
-      <div>Coming soon...</div>
-      {/* <div> ELECTRICAL SERVICES</div>
-      <div>
-      <h2>Equipment brand we repaired:</h2>
-<ul>
-  <li>SEW Eurodrive Gear box</li>
-  <li>Baldor motor</li>
-  <li>General Electric GE motor</li>
-  <li>ABB motor</li>
-  <li>US motor</li>
-  <li>Vulcan Food</li>
-  <li>Hobart Food</li>
-  <li>Grundfos</li>
-  <li>Capacitor</li>
-  <li>Switch</li>
-  <li>Westing house</li>
-  <li>WEG motor</li>
-  <li>Nord gearbox</li>
-</ul>
+      <Frame title="Our Services"></Frame>
+   
+      <div className='container py-12'>
+      {metadata.servicePage.map((item,index)=> (
+        <div className='flex flex-col gap-8 py-4' key={index}>
+          <div className='text-4xl text-sky-900 text-center'>{item.title}</div>
+          <div className="grid grid-cols-3 grid-rows-1 gap-4 p-12">
+            {item.item.map((item,index)=> (
+              <div className="flex gap-4 items-center sv-item" key={index}>
+              <div className="block text-sky-600 text-3xl"><BsFillCursorFill /></div>
+              <p className="text-xl mb-0">{item}</p>
+            </div>
+            ))}
+    
+          </div>
+        </div>
 
-<h2>Restaurant equipment:</h2>
-<ul>
-  <li>Exhaust fan</li>
-  <li>Blower</li>
-  <li>Mixer</li>
-  <li>Steamer</li>
-</ul>
-
-<h2>Food processing:</h2>
-<ul>
-  <li>Meat slicer</li>
-  <li>Meat saw</li>
-</ul>
-
-<h2>Light industries:</h2>
-<ul>
-  <li>Automatic sliding gate</li>
-  <li>Table saw</li>
-  <li>Concrete mixer</li>
-  <li>Carpet cutting machine</li>
-  <li>Air Compressor</li>
-  <li>VFD Variable speed drive KB, Schneider, ABB, Mitshubishi</li>
-  <li>Pump</li>
-  <li>Blower fan/ Exhaust fan</li>
-  <li>Submersible pump</li>
-  <li>Step motor</li>
-  <li>PLC</li>
-  <li>Motion control</li>
-  <li>Automation control</li>
-  <li>Gear Motor</li>
-  <li>Break</li>
-  <li>DC motor</li>
-  <li>DC Starter</li>
-  <li>Electric oven</li>
-  <li>Ventilation</li>
-  <li>Conveyor system</li>
-  <li>Generator</li>
-  <li>Transformer</li>
-  <li>Commercial Vacuum machine</li>
-</ul>
-
-      </div> */}
+      ))}
       </div>
      
 

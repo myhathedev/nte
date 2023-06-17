@@ -75,87 +75,112 @@ export default function Home() {
     <SlideSlider />
 
     <div className="container flex flex-col gap-20 py-28 " ref={intro}>
-      <div id="intro1" className=" flex items-center justify-between box" >
+      <div id="intro1" className=" flex items-center justify-between" >
         <div className="w-3/5 text-justify">
           <p className='text-3xl font-light italic text-right text-sky-700'>WHO WE ARE</p>
           <p  className='text-xl text-sky-900 font-extrabold text-right'>“EXPERT IN TROUBLE SHOOTING AND CUSTOMIZED SOLUTIONS”</p>
+          <div className = 'box'>
           <p> 
             Founded by Hieu Nguyen in 1985 as N&N Electric Motor Specialists Ltd, operated as brand name NTE (Nguyen Technologies & Electrical Equipment) has emerged as a leader in Nova Scotia, Canada, specializing in AC/DC motor rewinding, gear box and pump overhaul, repair, troubleshooting, and service calls for control systems. 
           </p>
           <p>
             With over 35 years of experience, NTE has achieved steady growth and expanded its services to meet the evolving needs of its customers. Known for its technical excellence and knowledgeable expertise, NTE is a trusted name in the industry for rebuilding and remanufacturing all types of electrical equipment. Our know-how stands out, helping our customers minimize downtime and save on investment costs. Partner with us for reliable motor and control services, and let us provide exceptional solutions for all your electrical equipment needs.
           </p>
+          </div>
         </div>
         <div className=" flex w-2/5 justify-end ">
           <img
-            className="w-5/6 aspect-square object-cover rounded-full"
-            src= '/vertical2.jpg'
+            className="w-5/6 aspect-square object-contain"
+            src= '/section2/photo1.png'
             alt="Second slide"
           />
         </div>
       </div>
 
-<div id="intro2" className="flex items-center justify-between box">
-<div className=" flex w-2/5  justify-start">
-    <img
-      className="w-5/6 aspect-square object-cover rounded-full"
-      src= '/image-asset2.jpeg'
-      alt="Second slide"
-    />
-  </div>
-  <div className="w-3/5">
-    <p className='text-3xl font-light italic  text-sky-700'>WHAT WE DO</p>
-    <p  className='text-xl  text-sky-900 font-extrabold'>“MINIMIZE YOUR DOWN TIME AND SAVE YOUR INVESTMENT”</p>
-    <div className='flex flex-col'>
-      <p className='font-bold text-slate-500'>ELECTRIC EQUPIPMENT SERVICES:</p>
-      {metadata.electricServices.map((item,index) => (
-              <div className ='flex items-center gap-2 pb-2' key={index}><BsTools className='w-8'/>{item}</div>
-            ))}
-      </div>
-    <p className='pt-4 font-bold text-slate-500'> MORE THAN 15 YEARS DISTRIBUTETECHNOLOGIES EQUPIPMENT TO VIETNAM MARKET: LAW ENFORCEMENT: MASSLOAD, KUSTOM SIGNAL, INTOXIMETER</p>
-    {metadata.distributeService.map((item,index) => (
-            <div className ='flex items-center gap-2 pb-2' key={index}><BsBoxSeam className='w-8'/>{item}</div>
-          ))}
-  </div> 
-</div>
+      <div id="intro2" className = 'flex flex-col gap-4'>
+      <div  className="flex items-end justify-between">
+        <div>
+        <div className=" flex justify-start gap-2 ">
+            <img
+              className="w-1/3 aspect-square object-cover"
+              src= '/section2/photo2a.png'
+              alt="Equipment"
+            />
+            <img
+              className="aspect-square object-cover "
+              src= '/section2/photo2b.jpg'
+              alt="Equipment"
+            />
+          </div>
+          <div>
+            <img
+              className="w-4/5 object-contain"
+              src= '/section2/photo2d.jpg'
+              alt="Equipment"
+            />
 
-<div id="intro3" className='flex flex-col gap-12 box'>
-  <div className="flex items-center justify-between">
-  <div className="w-3/5">
-    <p className='text-3xl font-light italic  text-sky-700'>WHO WE SERVE</p>
-    <p  className='text-xl  text-sky-900 font-extrabold'>“OURS LOYALTY CUSTOMERS”</p>
-   <div className='flex gap-4'>
-   <div className='list-none'>
-      <p className='text-3xl'>38 years </p>
-          <p className='text-lg font-bold text-slate-500'>Serving in Electric Motor Repair Services:</p> 
-          {metadata.electricServicesCustomers.map((item,index) => (
-            <div className ='flex h-8 items-center gap-2' key={index}><BsFillPersonCheckFill className='w-6 h-6 p-1 aspect-square text-white rounded-full bg-sky-600' />{item}</div>
-          ))}
+        </div>
+        </div>
+       
+        <div className="w-3/5">
+          <p className='text-3xl font-light italic  text-sky-700'>WHAT WE DO</p>
+          <p  className='text-xl  text-sky-900 font-extrabold'>“MINIMIZE YOUR DOWN TIME AND SAVE YOUR INVESTMENT”</p>
+          <div className='flex flex-col box'>
+            <p className='font-bold text-slate-500'>ELECTRIC EQUPIPMENT SERVICES:</p>
+            {metadata.electricServices.map((item,index) => (
+                    <div className ='flex items-center gap-2 pb-2' key={index}><BsTools className='w-8'/>{item}</div>
+                  ))}
+            <Link href='/services'>More about our Services...</Link>
+            <p className='pt-4 font-bold text-slate-500'> MORE THAN 15 YEARS DISTRIBUTETECHNOLOGIES EQUPIPMENT TO VIETNAM MARKET</p>
+          {metadata.distributeService.map((item,index) => (
+                  <div className ='flex items-center gap-2 pb-2' key={index}><BsBoxSeam className='w-8'/>{item}</div>
+                ))}
+          </div>
+        
+        </div> 
       </div>
-      <div className='list-none'>
-      <p className='text-3xl'>More than 15 years</p>
-        <p className='text-lg font-bold text-slate-500'>Export Technological Equipment for: </p>
-        {metadata.technologicalEquipmentCustomers.map((item,index) => (
-           <div className ='flex h-8 items-center gap-2' key={index}><BsFillPersonCheckFill className='w-6 h-6 p-1 aspect-square text-white rounded-full bg-sky-600' />{item}</div>
-          ))}
+      
       </div>
-   </div>
-  </div>
-  <div className=" flex w-2/5 justify-end">
-    <img
-      className="w-5/6 aspect-square object-cover rounded-full"
-      src= '/customer.jpg'
-      alt="Second slide"
-    />
-  </div>
+      <div className='flex justify-evenly'>
+                  {metadata.exportClient.map((item,index)=> 
+                  <div key={index} className='flex flex-col gap-4 items-center'>
+                    <div><b>{item.name}</b></div>
+                    <div className='flex w-40'><img src={item.logo} alt={item.title}></img></div>
+                  </div>)}
+                </div>
+      
+      <div id="intro3" className='flex flex-col gap-12'>
+        <div className="flex items-center text-center">
+          <div className="w-full">
+            <p className='text-3xl font-light italic  text-sky-700'>WHO WE SERVE</p>
+            <p  className='text-xl  text-sky-900 font-extrabold'>“OURS LOYALTY CUSTOMERS”</p>
+          <div className='flex gap-4 justify-evenly box'>
+            <div className='list-none'>
+              <p className='text-3xl'>38 years </p>
+                  <p className='text-lg font-bold text-slate-500'>Serving in Electric Motor Repair Services:</p> 
+                  {metadata.electricServicesCustomers.map((item,index) => (
+                    <div className ='flex h-8 items-center gap-2' key={index}><BsFillPersonCheckFill className='w-6 h-6 p-1 aspect-square text-white rounded-full bg-sky-600' />{item}</div>
+                  ))}
+              </div>
+              <div className='list-none'>
+                <p className='text-3xl'>More than 15 years</p>
+                <p className='text-lg font-bold text-slate-500'>Export Technological Equipment for: </p>
+                {metadata.technologicalEquipmentCustomers.map((item,index) => (
+                  <div className ='flex h-8 items-center gap-2' key={index}><BsFillPersonCheckFill className='w-6 h-6 p-1 aspect-square text-white rounded-full bg-sky-600' />{item}</div>
+                  ))}
+              
 
+              </div>
+          </div>
+          </div>
+
+        </div>
+      
+        <div className='container col-span-3 overflow-hidden '>
+          <LogoAnimation />
+        </div>
+      </div>
   </div>
- 
-  <div className='container col-span-3 overflow-hidden '>
-  <LogoAnimation />
-  </div>
-</div>
-</div>
 
 
 <div id="delivery" className= "flex">

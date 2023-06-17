@@ -16,7 +16,7 @@
 .contactbutton:hover {
   transition: all 0.2s;
   box-shadow: 0 0 10px white;
-  text-shadow: 0 0 10px white;;
+  text-shadow: 0 0 10px white;
 }
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {

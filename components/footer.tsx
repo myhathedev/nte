@@ -21,9 +21,10 @@ export default function Footer() {
     <div className="flex flex-col w-1/4">
       <p className="text-2xl">CONTACT US</p>
       <div className="text-gray-400">
-        <p>Phone: (902) 461-7533</p>
-        <p>Email: Hieunnte@eastlink.ca</p>
-        <p>Address: 339 Windmill Road, Dartmouth, NS, B3A 1H8, Canada</p>
+        <p>Phone: {metadata.contactInfo.phone}</p>
+        <p>Fax: {metadata.contactInfo.fax}</p>
+        <p>Email: {metadata.contactInfo.email}</p>
+        <p>Address: {metadata.contactInfo.address}, {metadata.contactInfo.city}, {metadata.contactInfo.province} {metadata.contactInfo.postalCode} </p>
       </div>
     </div>
    

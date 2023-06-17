@@ -1,0 +1,19 @@
+.infogrid {
+    display: grid;
+    grid-template-columns: 20% auto;
+    gap: 1rem;
+    margin: 2rem 1rem;
+}
+
+
+
+.title {
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+    color: #0284C7;
+}
+
+.content {
+    font-size: 1.2rem;
+}
